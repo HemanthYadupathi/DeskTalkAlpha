@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#112852</color>
+    <color name="colorPrimaryDark">#0d1e3d</color>
+    <color name="colorAccent">#008DD2</color>
+    <color name="colorMainApp">#112852</color>
+    <color name="colorMainAppLight">#193d7c</color>
+    <color name="colorWhite">#FFF</color>
+    <color name="colorBlackLight">#434343</color>
+    <color name="colorGreyNonEdit">#686767</color>
+
+    <color name="colorTimetableSub">#FFEFECEC</color>
+    <color name="colorGreenPresent">#8bc34a</color>
+    <color name="colorRedAbsent">#fb5144</color>
+</resources>

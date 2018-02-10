@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/main"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@mipmap/ic_attend"
+            android:title="Attendance" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@mipmap/ic_person"
+            android:title="Profile Information" />
+
+    </group>
+
+</menu>

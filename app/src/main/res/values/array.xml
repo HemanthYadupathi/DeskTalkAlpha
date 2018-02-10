@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="gender">
+        <item>Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string-array name="classes">
+        <item>LKG A</item>
+        <item>LKG B</item>
+    </string-array>
+    <string-array name="attendancestatus">
+        <item>Unknown</item>
+        <item>Present</item>
+        <item>Absent</item>
+    </string-array>
+</resources>

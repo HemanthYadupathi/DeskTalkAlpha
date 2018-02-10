@@ -222,7 +222,6 @@ public class AttendanceMainActivity extends AppCompatActivity
                 .build();
 
         Apis mInterfaceService = retrofit.create(Apis.class);
-
         Call<JsonElement> mService = mInterfaceService.getClassDetails(token, UID);
 
         final ArrayList<String> classes = new ArrayList<String>();

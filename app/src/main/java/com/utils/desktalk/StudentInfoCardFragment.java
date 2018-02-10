@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -37,6 +38,7 @@ public class StudentInfoCardFragment extends Fragment {
     private final String TAG = StudentInfoCardFragment.class.getSimpleName();
     private SharedPreferences mSharedPreferences;
     private String loginToken;
+    private EditText mEditTextRemarks;
     //private Map<String, String> mMapStatus = new HashMap<String, String>();
     int pos;
 
@@ -68,6 +70,7 @@ public class StudentInfoCardFragment extends Fragment {
         mTextViewRegno = (TextView) view.findViewById(R.id.regno);
         mTextViewAttend = (TextView) view.findViewById(R.id.atten);
         mLayoutButtons = (LinearLayout) view.findViewById(R.id.layout_btn);
+        mEditTextRemarks = (EditText) view.findViewById(R.id.editRemark);
 
         mSharedPreferences = getActivity().getApplicationContext().getSharedPreferences(Constants.PREFERENCE_LOGIN_DETAILS, Context.MODE_PRIVATE);
         loginToken = mSharedPreferences.getString(Constants.PREFERENCE_KEY_TOKEN, "");
@@ -100,7 +103,7 @@ public class StudentInfoCardFragment extends Fragment {
                     Map<String, String> map = new HashMap<String, String>();
                     map.put("attendance_take_id", getArguments().getString("attend"));
                     map.put("status", Constants.ATTENDANCE_STATUS_PRESENT);
-                    map.put("remarks", "");
+                    map.put("remarks", mEditTextRemarks.getText().toString());
                     Constants.markStudentAttendance(TAG, loginToken, map);
                 } else {
                     Toast.makeText(getActivity(), getString(R.string.check_connection), Toast.LENGTH_SHORT).show();
@@ -118,7 +121,7 @@ public class StudentInfoCardFragment extends Fragment {
                     Map<String, String> map = new HashMap<String, String>();
                     map.put("attendance_take_id", getArguments().getString("attend"));
                     map.put("status", Constants.ATTENDANCE_STATUS_ABSENT);
-                    map.put("remarks", "");
+                    map.put("remarks", mEditTextRemarks.getText().toString());
                     Constants.markStudentAttendance(TAG, loginToken, map);
                 } else {
                     Toast.makeText(getActivity(), getString(R.string.check_connection), Toast.LENGTH_SHORT).show();
